@@ -1,9 +1,9 @@
 const Header = () => {
     const view = `
-        <header>
-            <a class="header__logo"></a>
-            <a class="header__about">About</a>
-        </header>
+            <ul class="nav">
+                <a class="header__logo"></a>
+                <a class="header__about">About</a>
+            </ul>
     `;
 
     return view;
