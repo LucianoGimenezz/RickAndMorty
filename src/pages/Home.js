@@ -2,9 +2,9 @@ const Home = () => {
     const view = `
         <div>
             <article>
-               <a>
+               <a href='#/1/'>
                   <img/>
-                    <h2></h2>
+                  <h2>Name</h2>
                </a>
             </article>
         </div>

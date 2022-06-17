@@ -1,9 +1,14 @@
 function getHash () {
+    console.log(location
+        .hash
+        .slice(1)
+        .toLocaleLowerCase()
+        .split('/')[1] || '/')
     return location
             .hash
             .slice(1)
             .toLocaleLowerCase()
-            .split('/') || '/'
+            .split('/')[1] || '/'
 } 
 
 function resolveRoutes(route) {

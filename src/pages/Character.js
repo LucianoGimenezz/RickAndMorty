@@ -1,8 +1,11 @@
 const Character = () => {
     const view = `
         <div>
+            <a href="/">
+              Back to home
+            </a>
             <article>
-                <img src="image" alt=""/>
+                <img src="image" alt="image"/>
                 <h2></h2>
             </article>
             <article>

@@ -2,7 +2,7 @@ const Header = () => {
     const view = `
             <ul class="nav">
                 <a class="header__logo"></a>
-                <a class="header__about">About</a>
+                <a href="#/about/" class="header__about">About</a>
             </ul>
     `;
 
