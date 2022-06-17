@@ -1,9 +1,6 @@
+const API = 'https://rickandmortyapi.com/api/character';
+
 function getHash () {
-    console.log(location
-        .hash
-        .slice(1)
-        .toLocaleLowerCase()
-        .split('/')[1] || '/')
     return location
             .hash
             .slice(1)
@@ -21,7 +18,30 @@ function resolveRoutes(route) {
     return `/${route}`;
 };
 
+async function getAllCharacters() {
+    try{
+        const response = await fetch(API);
+        const data = await response.json();
+        return data;
+    }catch(error) {
+        console.error(new Error(`Fetch error ${error}`));
+    }
+}
+
+
+async function getCharacterById(id){
+    try {
+        const response = await fetch(`${API}/${id}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(new Error(`Fetch error ${error}`));
+    }
+} 
+
 export {
+    getCharacterById,
+    getAllCharacters,
     getHash,
     resolveRoutes
 }
