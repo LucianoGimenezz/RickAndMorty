@@ -36,6 +36,13 @@ module.exports = {
                 "css-loader",
                 "sass-loader"
               ]
+          },
+          {
+            test:/\.(png|svg)$/,
+            type: 'asset',
+            generator: {
+                filename: './src/assets[hash][ext]'
+            }
           }
       ]
      },
