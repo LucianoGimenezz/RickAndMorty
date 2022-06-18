@@ -6,25 +6,31 @@ const Character = async () => {
     const id = getHash();
     const character = await getCharacterById(id);
     const view = `
-        <div>
+          <div class="character-container">
             <a href="/">
               Back to home
-            </a>
-            <article>
-                <img 
-                  src=${character.image}
-                  alt=${character.name}/>
-                <h2></h2>
-            </article>
-            <article>
-             <h3>Episode: <span>${character.episode.length}</span></h3>
-             <h3>Status: <span> ${character.status}</span></h3>
-             <h3>Gender: <span>${character.gender}</span></h3>
-             <h3>Origin: <span>${character.origin.name}</span></h3>
-             <h3>Last Location: <span> ${character.location.name}</span></h3>
-            </article>
-        </div>
-    `;
+            </a>    
+            <div class="character-info">
+              <article>
+              <img 
+                src=${character.image}
+                alt=${character.name}/>
+              </article>
+              <article class="info-container">
+                <h3>Episode</h3>
+                <span>${character.episode.length}</span>
+                <h3>Status</h3>
+                <span> ${character.status}</span>
+                <h3>Gender</h3>
+                <span>${character.gender}</span>
+                <h3>Origin</h3>
+                <span>${character.origin.name}</span>
+                <h3>Last Location</h3>
+                <span> ${character.location.name}</span>
+              </article>
+            </div>
+          </div<
+          `;
 
     return view;
 }

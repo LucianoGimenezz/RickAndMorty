@@ -11,10 +11,12 @@ const Home = async () => {
                         src=${item.image}
                         alt=${item.name}  
                       />
-                      <a href='#/${item.id}' class="card__info">
-                          <h2>${item.name}</h2>
-                            <span>View</span>
-                      </a>
+                      <div class="card__info">
+                        <h2>${item.name}</h2>
+                        <a href='#/${item.id}'>
+                            Show more
+                        </a>
+                      </div>
                     </article>
                 `
                 ).join('')}
